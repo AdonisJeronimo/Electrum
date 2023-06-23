@@ -12,6 +12,12 @@
     height: 400px
     padding: 2rem
 
+    @include base-mixins.mobile
+        background-size: 70%
+        background-position-y: 130%
+        background-position-x: 120%
+        height: 700px
+
     &-content
         height: 100%
         flex-direction: column
@@ -19,9 +25,17 @@
         @include layouts-mixins.center-content
         justify-content: center
 
+        @include base-mixins.mobile
+            text-align: center
+
         &-timer
             display: flex
             margin-bottom: 2rem
+
+            @include base-mixins.mobile
+                flex-wrap: wrap
+                align-self: center
+                justify-content: center
 
         .deal-container-timer
             display: flex
@@ -38,6 +52,9 @@
             &-timer
                 font-weight: bold
                 font-size: 1.5rem
+
+                @include base-mixins.mobile
+                    margin-bottom: 1.5rem
 
         &-title,&-subtitle
             margin-bottom: 1rem
